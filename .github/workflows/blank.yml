@@ -35,7 +35,7 @@ jobs:
       - name: excute script
         run: sh get-docker.sh
       - name: install sonar
-        run: docker container run -dt --name sonarqube -p 9000:9000 sonarqube
+        run: sudo docker container run -dt --name sonarqube -p 9000:9000 sonarqube
 
 
       # Runs a set of commands using the runners shell
