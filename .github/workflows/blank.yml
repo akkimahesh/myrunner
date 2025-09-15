@@ -30,8 +30,10 @@ jobs:
         
       - name: install docker
         run: curl -fsSL https://get.docker.com -o get-docker.sh
-      - name: excute docker script
-        run: ./get-docker.sh
+      - name: change directory
+        run: cd actions-runner/mahesh/myrunner/myrunner/
+      - name: excute shell script
+        run: sh get-docker.sh
       - name: install sonarqube
         run: docker container run -dt --name Sonarqube -p 9000:9000 sonarqube
 
